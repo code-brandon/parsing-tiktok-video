@@ -92,5 +92,20 @@
 
 3.  `htmlunit` 模拟浏览器 启动慢 ， 请耐心等待解析
 
+4.  修改minio的上传代码 com.xiaozheng.tikTokVideo.service.FileOperService#fileUpload
+
+    4.1 `douyin-video` 是 当前项目的桶名
+
+    4.2 minio开始上传代码
+
+    ```java
+    minioClient.putObject(PutObjectArgs.builder().bucket("douyin-video").object(format + "/" + finalFileName).stream(
+                            inputStream, -1, 10485760)
+                                                  .contentType("video/mp4")
+                                                  .build());
+    // 上传完毕拼接minio请求地址
+    result = "https://data.smallblog.cn" + "/douyin-video/" + format + "/" + finalFileName;
+    ```
+
 ![](https://data.smallblog.cn/blog-images/202111/ba3df8af4df711ec957e005056c00008.png)
 
