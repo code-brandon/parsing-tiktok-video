@@ -106,7 +106,7 @@ public class ResolveService {
             final String encode = URLDecoder.decode(render_data.html().substring("//<![CDATA[".length(), render_data.html().length() - "//]]>".length()).trim(), "UTF-8");
             JSONObject jsonObject = JSON.parseObject(encode);
 
-            JSONObject c_20 = jsonObject.getJSONObject("C_20");
+            JSONObject c_20 = jsonObject.getJSONObject("21");
 
             JSONObject detail = c_20.getJSONObject("aweme").getJSONObject("detail");
             // 视频ID

@@ -77,6 +77,12 @@
                     console.log(pattern.exec(str)[0]);
                     $("#inputUrl").val(pattern.exec(str)[0]);
                 });
+                $("#VideoUrl").blur(function () {
+                    var pattern = /(https?|ftp|file):\/\/[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]/,
+                        str = $("#VideoUrl").val();
+                    console.log(pattern.exec(str)[0]);
+                    $("#VideoUrl").val(pattern.exec(str)[0]);
+                });
                 //1.给登录按钮绑定单击事件
                 $("#bt_sub").click(function () {
                     //2.发送agax请求，提交表单数据
