@@ -106,6 +106,14 @@
     // 上传完毕拼接minio请求地址
     result = "https://data.smallblog.cn" + "/douyin-video/" + format + "/" + finalFileName;
     ```
+5. 每月都要修改的位置
+    > 当发现 解析无响应 可能你就要修改这里的代码了  可能 抖音修改了json的键 代码无法获取
+    
+    com/xiaozheng/tikTokVideo/service/ResolveService.java:110
+    ```java
+       // TODO 每个月检查一下 键值是否正确
+       JSONObject c_20 = jsonObject.getJSONObject("32");
+    ```
 
 ![](https://data.smallblog.cn/blog-images/202111/ba3df8af4df711ec957e005056c00008.png)
 
