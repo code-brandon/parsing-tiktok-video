@@ -66,7 +66,7 @@
 
 #### 安装教程
 
-1.  git clone https://gitee.com/zong_zh/parsing-tiktok-video.git
+1.  git clone https://github.com/code-brandon/parsing-tiktok-video.git
 2.  修改`jdbc.properties`文件中的参数
 3.  修改`minio.properties`中的参数
 4.  启动路径：http://localhost:8080/WebsiteApplet/index.htnl
